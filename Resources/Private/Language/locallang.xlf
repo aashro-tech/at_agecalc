@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:at_agecalc/Resources/Private/Language/locallang.xlf" date="2024-12-25T06:00:34Z" product-name="at_agecalc">
+		<header/>
+		<body>
+			<trans-unit id="tx_agecalc_domain_model_age" resname="tx_agecalc_domain_model_age">
+				<source>Age</source>
+			</trans-unit>
+			<trans-unit id="tx_agecalc_domain_model_age.description" resname="tx_agecalc_domain_model_age.description">
+				<source>Age</source>
+			</trans-unit>
+			<trans-unit id="tx_agecalc_domain_model_age.dob" resname="tx_agecalc_domain_model_age.dob">
+				<source>Dob</source>
+			</trans-unit>
+			<trans-unit id="tx_agecalc_domain_model_age.dob.description" resname="tx_agecalc_domain_model_age.dob.description">
+				<source>Dob</source>
+			</trans-unit>
+			<trans-unit id="tt_content.calc_alignment" resname="tt_content.calc_alignment">
+				<source>Alignment</source>
+			</trans-unit>
+			<trans-unit id="tt_content.calc_header" resname="tt_content.calc_header">
+				<source>Header</source>
+			</trans-unit>
+			<trans-unit id="tt_content.calc_header_clr" resname="tt_content.calc_header_clr">
+				<source>Header color</source>
+			</trans-unit>
+			<trans-unit id="tt_content.calc_btn_name" resname="tt_content.calc_btn_name">
+				<source>Calculator button label</source>
+			</trans-unit>
+			<trans-unit id="tt_content.rst_btn_name" resname="tt_content.rst_btn_name">
+				<source>Reset button label</source>
+			</trans-unit>
+			<trans-unit id="tt_content.btn_bgclr" resname="tt_content.btn_bgclr">
+				<source>Button background color</source>
+			</trans-unit>
+			<trans-unit id="tt_content.btn_txtclr" resname="tt_content.btn_txtclr">
+				<source>Button label color</source>
+			</trans-unit>
+			<trans-unit id="tt_content.bg_clr_type" resname="tt_content.bg_clr_type">
+				<source>Background color type</source>
+			</trans-unit>
+			<trans-unit id="tt_content.solid_bgclr" resname="tt_content.solid_bgclr">
+				<source>Solid background color</source>
+			</trans-unit>
+			<trans-unit id="tt_content.grdnt_clr1" resname="tt_content.grdnt_clr1">
+				<source>Gradient background color 1</source>
+			</trans-unit>
+			<trans-unit id="tt_content.grdnt_clr2" resname="tt_content.grdnt_clr2">
+				<source>Gradient background color 2</source>
+			</trans-unit>
+			<trans-unit id="error-msg" resname="error-msg">
+				<source>Please enter a valid date of birth.</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

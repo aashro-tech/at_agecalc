@@ -1,0 +1,8 @@
+plugin.tx_agecalc_agecomp {
+    view {
+        # cat=plugin.tx_agecalc_agecomp/file; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:at_agecalc/Resources/Private/Templates/
+        # cat=plugin.tx_agecalc_agecomp/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath = EXT:at_agecalc/Resources/Private/Layouts/
+    }
+}

@@ -1,0 +1,16 @@
+mod {
+    wizards.newContentElement.wizardItems.plugins {
+        elements {
+            agecomp {
+                iconIdentifier = at_agecalc-plugin-agecomp
+                title = LLL:EXT:at_agecalc/Resources/Private/Language/locallang_db.xlf:tx_at_agecalc_agecomp.name
+                description = LLL:EXT:at_agecalc/Resources/Private/Language/locallang_db.xlf:tx_at_agecalc_agecomp.description
+                tt_content_defValues {
+                    CType = list
+                    list_type = agecalc_agecomp
+                }
+            }
+        }
+        show = *
+    }
+}

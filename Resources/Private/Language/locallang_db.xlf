@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:at_agecalc/Resources/Private/Language/locallang_db.xlf" date="2024-12-25T06:00:34Z" product-name="at_agecalc">
+		<header/>
+		<body>
+			<trans-unit id="tx_agecalc_domain_model_age" resname="tx_agecalc_domain_model_age">
+				<source>Age</source>
+			</trans-unit>
+			<trans-unit id="tx_agecalc_domain_model_age.description" resname="tx_agecalc_domain_model_age.description">
+				<source>Age</source>
+			</trans-unit>
+			<trans-unit id="tx_agecalc_domain_model_age.dob" resname="tx_agecalc_domain_model_age.dob">
+				<source>Dob</source>
+			</trans-unit>
+			<trans-unit id="tx_agecalc_domain_model_age.dob.description" resname="tx_agecalc_domain_model_age.dob.description">
+				<source>Dob</source>
+			</trans-unit>
+			<trans-unit id="tx_at_agecalc_agecomp.name" resname="tx_at_agecalc_agecomp.name">
+				<source>Agecompute</source>
+			</trans-unit>
+			<trans-unit id="tx_at_agecalc_agecomp.description" resname="tx_at_agecalc_agecomp.description">
+				<source>Calculates age in years, months and days. Accepts date input through intuitive date picker or custom input fields.</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

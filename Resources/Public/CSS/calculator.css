@@ -1,0 +1,44 @@
+.tx-age-calc { display: flex; }
+.align-center { justify-content: center; }
+.align-right { justify-content: flex-end; }
+.agefind .container { min-height: 20vh; color: #fff; padding: 20px; border-radius: 5px; }
+.agefind .container blockquote { position: relative; padding: 1.25rem 1.5rem; border-left: 4px solid rgba(0, 0, 0, 0.125); border-left-color: rgba(0, 0, 0, 0.125); margin-bottom: 1rem; font-size: 1.25rem; }
+.agefind .container h1 { font-weight: 500; }
+.agefind .container .calculator-box .input-box { padding: 35px; border-radius: 5px; background: rgba(255, 255, 255, 0.1); display: flex; align-items: center; }
+.agefind .container .calculator-box .input-box input { flex: 1; margin-right: 20px; padding: 14px 20px; border: 0; outline: 0; font-size: 18px; border-radius: 5px; position: relative; }
+.agefind .container .calculator-box .input-box button {
+	display: inline-block;
+	border: 0;
+	outline: 0;
+	padding: 15px 30px;
+	border-radius: 5px;
+	font-weight: 500;
+	color: #333;
+	cursor: pointer;
+	transition: transform 0.3s ease;
+}
+.agefind .container .calculator-box .input-box button[type="button"] { margin-right: 20px; }
+.agefind .container .calculator-box .input-box button:hover { transform: scale(1.1); }
+.agefind .calculator-box .ageOutput { padding: 20px 0px 0px; display: flex; text-align: center; justify-content: space-around; }
+.agefind .calculator-box .ageOutput p {
+  background: white;
+  color: black;
+  padding: 3px 15px;
+  border-radius: 4px;
+  font-size: 17px;
+  font-weight: 600;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+.agefind .calculator-box .ageOutput p span { color: #837e7e; font-weight: initial; }
+
+@media (max-width: 767px) {
+	.agefind .container .calculator-box .input-box { display: grid; gap: 10px; }
+	.agefind .container .calculator-box .input-box input, #calculateAgeButton{ margin:0; }
+	.agefind .calculator-box .ageOutput { flex-wrap: wrap; }
+}
+@media (max-width: 500px) {
+	.agefind .calculator-box .ageOutput p { flex-basis: calc(50% - 80px); }
+}
+@media (min-width: 501px) and (max-width: 767px) {
+	.agefind .calculator-box .ageOutput p { flex-basis: calc(50% - 100px); }
+}

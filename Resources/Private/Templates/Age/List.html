@@ -1,0 +1,59 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+<f:section name="content">
+    <div class="agefind" style="width: 635px;">
+        <div class="container">
+            <f:if condition="{settings.calc_header}"><blockquote><h1>{settings.calc_header}</h1></blockquote></f:if>
+            <div class="calculator-box">
+                <f:form class="input-box" action="create" name="newAge" object="{newAge}">
+                    <f:form.textfield type="date" property="dob" id="dob" additionalAttributes="{max: ''}" />
+                    <p style="display: none;" id="errorMsg"><f:translate key="error-msg" extensionName="at_agecalc" /></p>
+                    <button type="button" id="calculateAgeButton">{settings.calc_btn_name}</button>
+                    <button type="reset" id="resetButton">{settings.rst_btn_name}</button>
+                </f:form>
+
+                <div class="ageOutput" id="ageOutput" style="display: none;">
+                    <p id="years"></p>
+                    <p id="months"></p>
+                    <p id="days"></p>
+                    <p id="hours"></p>
+                    <p id="minutes"></p>
+                    <p id="seconds"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <f:asset.css identifier="identifier123">
+        <f:if condition="{settings.calc_header_clr}">
+            <f:then>
+                .agefind .container h1 { color: {settings.calc_header_clr}; }
+                .agefind .container blockquote { border-color: {settings.calc_header_clr};}
+            </f:then>
+            <f:else>.agefind .container blockquote { border-color: black;}</f:else>
+        </f:if>
+        <f:if condition="{settings.btn_bgclr}">
+            <f:then>.agefind .container .calculator-box .input-box button { background: {settings.btn_bgclr};}</f:then>
+            <f:else>.agefind .container .calculator-box .input-box button { background: #f2f2bc;}</f:else>
+        </f:if>
+        <f:if condition="{settings.btn_txtclr}">
+            <f:then>.agefind .container .calculator-box .input-box button { color : {settings.btn_txtclr};}</f:then>
+        </f:if>
+        <f:if condition="{settings.bg_clr_type} == 1">
+            <f:if condition="{settings.solid_bgclr}">
+                <f:then>.agefind .container { background: {settings.solid_bgclr};}</f:then>
+            </f:if>
+        </f:if>
+        <f:if condition="{settings.bg_clr_type} == 2">
+            <f:if condition="{settings.grdnt_clr1} && {settings.grdnt_clr2}">
+                <f:then>.agefind .container { background: linear-gradient(135deg, {settings.grdnt_clr1}, {settings.grdnt_clr2});}</f:then>
+                <f:else>.agefind .container { background: linear-gradient(135deg, #4203a9, #90bafc); }</f:else>
+            </f:if>
+        </f:if>
+        <f:if condition="{settings.bg_clr_type} == 0">
+            <f:then>.agefind .container .calculator-box .input-box input { border: 1px solid black; }</f:then>
+        </f:if>
+    </f:asset.css>
+</f:section>
+</html>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file target-language="pl" datatype="plaintext" original="EXT:age_calc/Resources/Private/Language/locallang.xlf" date="2024-12-25T06:00:34Z" product-name="age_calc">
+		<header/>
+		<body>
+			<trans-unit id="error-msg" resname="error-msg">
+				<target>Proszę podać prawidłową datę urodzenia.</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

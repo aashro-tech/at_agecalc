@@ -1,0 +1,18 @@
+plugin.tx_agecalc_agecomp {
+    view {
+        templateRootPaths.0 = EXT:at_agecalc/Resources/Private/Templates/
+        templateRootPaths.1 = {$plugin.tx_agecalc_agecomp.view.templateRootPath}
+        layoutRootPaths.0 = EXT:at_agecalc/Resources/Private/Layouts/
+        layoutRootPaths.1 = {$plugin.tx_agecalc_agecomp.view.layoutRootPath}
+    }
+}
+
+page = PAGE
+page {
+    includeCSS {
+        at_agecalc_css = EXT:at_agecalc/Resources/Public/CSS/calculator.css
+    }
+    includeJS {
+        at_agecalc_calculate = EXT:at_agecalc/Resources/Public/JS/calculate.js
+    }
+}

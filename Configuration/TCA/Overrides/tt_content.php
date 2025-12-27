@@ -8,9 +8,14 @@ defined('TYPO3') || exit;
 ExtensionUtility::registerPlugin(
     'AgeCalc',
     'Agecomp',
-    'Agecompute',
-    'at_agecalc-plugin-agecomp'
+    'Age Calculate',
+    'content-plugin',
+    'plugins',
+    'LLL:EXT:at_agecalc/Resources/Private/Language/locallang_db.xlf:tx_at_agecalc_agecomp.description'
 );
+
+// Set the icon for the plugin content element
+$GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['agecalc_agecomp'] = 'content-plugin';
 
 $tempColumns = [
     'calc_alignment' => [
@@ -54,6 +59,7 @@ $tempColumns = [
         'label' => 'LLL:EXT:at_agecalc/Resources/Private/Language/locallang.xlf:tt_content.calc_btn_name',
         'config' => [
             'type' => 'input',
+            'placeholder' => 'Submit or Calculate',
             'size' => 20,
             'eval' => 'required',
             'behaviour' => [
@@ -67,6 +73,7 @@ $tempColumns = [
         'label' => 'LLL:EXT:at_agecalc/Resources/Private/Language/locallang.xlf:tt_content.rst_btn_name',
         'config' => [
             'type' => 'input',
+            'placeholder' => 'Reset',
             'size' => 20,
             'eval' => 'required',
             'behaviour' => [
@@ -106,6 +113,7 @@ $tempColumns = [
                 ['Solid Color', 1],
                 ['Gradient Color', 2],
             ],
+            'default' => '2',
         ],
         'onChange' => 'reload',
         'displayCond' => 'FIELD:list_type:=:agecalc_agecomp',

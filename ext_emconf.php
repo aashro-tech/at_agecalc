@@ -9,10 +9,10 @@ $EM_CONF[$_EXTKEY] = [
     'author_company' => 'Aashro Tech',
     'state' => 'stable',
     'clearCacheOnLoad' => 0,
-    'version' => '1.0.0',
+    'version' => '2.0.1',
     'constraints' => [
         'depends' => [
-            'typo3' => '10.0.0-12.4.99',
+            'typo3' => '13.0.0-13.99.99',
         ],
         'conflicts' => [],
         'suggests' => [],

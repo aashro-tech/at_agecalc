@@ -6,30 +6,21 @@
 .agefind .container h1 { font-weight: 500; }
 .agefind .container .calculator-box .input-box { padding: 35px; border-radius: 5px; background: rgba(255, 255, 255, 0.1); display: flex; align-items: center; }
 .agefind .container .calculator-box .input-box input { flex: 1; margin-right: 20px; padding: 14px 20px; border: 0; outline: 0; font-size: 18px; border-radius: 5px; position: relative; }
-.agefind .container .calculator-box .input-box button {
-	display: inline-block;
-	border: 0;
-	outline: 0;
-	padding: 15px 30px;
-	border-radius: 5px;
-	font-weight: 500;
-	color: #333;
-	cursor: pointer;
-	transition: transform 0.3s ease;
-}
+.agefind .container .calculator-box .input-box button {	display: inline-block;border: 0;outline: 0;padding: 15px 30px;border-radius: 5px;font-weight: 500;color: #333;cursor: pointer;transition: transform 0.3s ease; }
 .agefind .container .calculator-box .input-box button[type="button"] { margin-right: 20px; }
 .agefind .container .calculator-box .input-box button:hover { transform: scale(1.1); }
 .agefind .calculator-box .ageOutput { padding: 20px 0px 0px; display: flex; text-align: center; justify-content: space-around; }
-.agefind .calculator-box .ageOutput p {
-  background: white;
-  color: black;
-  padding: 3px 15px;
-  border-radius: 4px;
-  font-size: 17px;
-  font-weight: 600;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-}
+.agefind .calculator-box .ageOutput p { background: white; color: black; padding: 3px 15px; border-radius: 4px; font-size: 17px; font-weight: 600; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); }
 .agefind .calculator-box .ageOutput p span { color: #837e7e; font-weight: initial; }
+.age-modal {position: fixed;inset: 0;background: rgba(0, 0, 0, 0.6);z-index: 9999;display: flex;justify-content: center;align-items: center;
+opacity: 0;visibility: hidden;transition: opacity 0.3s ease, visibility 0.3s ease; }
+.age-modal.show {opacity: 1;visibility: visible; }
+.age-modal-content {background: #fff;padding: 25px 30px;max-width: 400px;width: 90%;border-radius: 8px;position: relative;text-align: center;box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+transform: scale(0.85) translateY(-20px);opacity: 0;transition: transform 0.3s ease, opacity 0.3s ease; }
+.age-modal.show .age-modal-content {transform: scale(1) translateY(0);opacity: 1; }
+.age-modal-content p {margin: 0;font-size: 16px;color: #333; }
+.age-modal-close {position: absolute;right: 12px;top: 10px;font-size: 22px;cursor: pointer;color: #666; }
+.age-modal-close:hover {color: #000; }
 
 @media (max-width: 767px) {
 	.agefind .container .calculator-box .input-box { display: grid; gap: 10px; }

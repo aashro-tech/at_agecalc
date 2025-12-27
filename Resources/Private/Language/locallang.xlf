@@ -25,19 +25,19 @@
 				<source>Header color</source>
 			</trans-unit>
 			<trans-unit id="tt_content.calc_btn_name" resname="tt_content.calc_btn_name">
-				<source>Calculator button label</source>
+				<source>Submit button</source>
 			</trans-unit>
 			<trans-unit id="tt_content.rst_btn_name" resname="tt_content.rst_btn_name">
-				<source>Reset button label</source>
+				<source>Reset button</source>
 			</trans-unit>
 			<trans-unit id="tt_content.btn_bgclr" resname="tt_content.btn_bgclr">
-				<source>Button background color</source>
+				<source>Button's background color</source>
 			</trans-unit>
 			<trans-unit id="tt_content.btn_txtclr" resname="tt_content.btn_txtclr">
-				<source>Button label color</source>
+				<source>Button's color</source>
 			</trans-unit>
 			<trans-unit id="tt_content.bg_clr_type" resname="tt_content.bg_clr_type">
-				<source>Background color type</source>
+				<source>Background design</source>
 			</trans-unit>
 			<trans-unit id="tt_content.solid_bgclr" resname="tt_content.solid_bgclr">
 				<source>Solid background color</source>

@@ -7,8 +7,10 @@
             <f:if condition="{settings.calc_header}"><blockquote><h1>{settings.calc_header}</h1></blockquote></f:if>
             <div class="calculator-box">
                 <f:form class="input-box" action="create" name="newAge" object="{newAge}">
-                    <f:form.textfield type="date" property="dob" id="dob" additionalAttributes="{max: ''}" />
-                    <p style="display: none;" id="errorMsg"><f:translate key="error-msg" extensionName="at_agecalc" /></p>
+                    <f:form.textfield type="date" property="dob" id="dob" />
+                    <p style="display:none;" id="errorMsg">
+                        <f:translate key="error-msg" extensionName="at_agecalc" />
+                    </p>
                     <button type="button" id="calculateAgeButton">{settings.calc_btn_name}</button>
                     <button type="reset" id="resetButton">{settings.rst_btn_name}</button>
                 </f:form>
@@ -55,5 +57,13 @@
             <f:then>.agefind .container .calculator-box .input-box input { border: 1px solid black; }</f:then>
         </f:if>
     </f:asset.css>
+
+    <!-- Simple Modal -->
+    <div id="ageModal" class="age-modal">
+        <div class="age-modal-content">
+            <span class="age-modal-close">&times;</span>
+            <p id="ageModalMessage"></p>
+        </div>
+    </div>
 </f:section>
 </html>

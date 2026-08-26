@@ -5,14 +5,12 @@ use TYPO3\CMS\Extbase\Utility\ExtensionUtility;
 
 defined('TYPO3') || exit;
 
-ExtensionUtility::registerPlugin(
-    'AgeCalc',
-    'Agecomp',
-    'Age Calculate',
-    'content-plugin',
-    'plugins',
-    'LLL:EXT:at_agecalc/Resources/Private/Language/locallang_db.xlf:tx_at_agecalc_agecomp.description'
-);
+    ExtensionUtility::registerPlugin(
+        'AgeCalc',
+        'Agecomp',
+        'Age Calculate',
+        'plugin-icon' 
+    );
 
 // Set the icon for the plugin content element
 $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['agecalc_agecomp'] = 'content-plugin';
@@ -30,7 +28,7 @@ $tempColumns = [
                 ['Right', 'right'],
             ],
         ],
-        'displayCond' => 'FIELD:list_type:=:agecalc_agecomp',
+        'displayCond' => 'FIELD:CType:=:agecalc_agecomp',
     ],
     'calc_header' => [
         'l10n_mode' => 'prefixLangTitle',
@@ -42,7 +40,7 @@ $tempColumns = [
                 'allowLanguageSynchronization' => true,
             ],
         ],
-        'displayCond' => 'FIELD:list_type:=:agecalc_agecomp',
+        'displayCond' => 'FIELD:CType:=:agecalc_agecomp',
     ],
     'calc_header_clr' => [
         'exclude' => 1,
@@ -52,7 +50,7 @@ $tempColumns = [
             'renderType' => 'colorpicker',
             'size' => 10,
         ],
-        'displayCond' => 'FIELD:list_type:=:agecalc_agecomp',
+        'displayCond' => 'FIELD:CType:=:agecalc_agecomp',
     ],
     'calc_btn_name' => [
         'l10n_mode' => 'prefixLangTitle',
@@ -66,7 +64,7 @@ $tempColumns = [
                 'allowLanguageSynchronization' => true,
             ],
         ],
-        'displayCond' => 'FIELD:list_type:=:agecalc_agecomp',
+        'displayCond' => 'FIELD:CType:=:agecalc_agecomp',
     ],
     'rst_btn_name' => [
         'l10n_mode' => 'prefixLangTitle',
@@ -80,7 +78,7 @@ $tempColumns = [
                 'allowLanguageSynchronization' => true,
             ],
         ],
-        'displayCond' => 'FIELD:list_type:=:agecalc_agecomp',
+        'displayCond' => 'FIELD:CType:=:agecalc_agecomp',
     ],
     'btn_bgclr' => [
         'exclude' => 1,
@@ -90,7 +88,7 @@ $tempColumns = [
             'renderType' => 'colorpicker',
             'size' => 10,
         ],
-        'displayCond' => 'FIELD:list_type:=:agecalc_agecomp',
+        'displayCond' => 'FIELD:CType:=:agecalc_agecomp',
     ],
     'btn_txtclr' => [
         'exclude' => 1,
@@ -100,7 +98,7 @@ $tempColumns = [
             'renderType' => 'colorpicker',
             'size' => 10,
         ],
-        'displayCond' => 'FIELD:list_type:=:agecalc_agecomp',
+        'displayCond' => 'FIELD:CType:=:agecalc_agecomp',
     ],
     'bg_clr_type' => [
         'exclude' => 1,
@@ -116,7 +114,7 @@ $tempColumns = [
             'default' => '2',
         ],
         'onChange' => 'reload',
-        'displayCond' => 'FIELD:list_type:=:agecalc_agecomp',
+        'displayCond' => 'FIELD:CType:=:agecalc_agecomp',
     ],
     'solid_bgclr' => [
         'exclude' => 1,
@@ -159,13 +157,15 @@ ExtensionManagementUtility::addFieldsToPalette('tt_content', 'bgclr', 'bg_clr_ty
 
 ExtensionManagementUtility::addToAllTCAtypes(
     'tt_content',
-    'calc_alignment,
-    --palette--;Header controls;calcheaders,
-    --palette--;Button controls;buttoncntrl,
-    --palette--;Background-color controls;bgclr',
-    'list',
-    'after:list_type'
+    '
+        calc_alignment,
+        --palette--;Header controls;calcheaders,
+        --palette--;Button controls;buttoncntrl,
+        --palette--;Background-color controls;bgclr
+    ',
+    'agecalc_agecomp',
+    'after:header'
 );
 
-$GLOBALS['TCA']['tt_content']['columns']['pages']['displayCond'] = 'FIELD:list_type:!=:agecalc_agecomp';
-$GLOBALS['TCA']['tt_content']['columns']['recursive']['displayCond'] = 'FIELD:list_type:!=:agecalc_agecomp';
+$GLOBALS['TCA']['tt_content']['columns']['pages']['displayCond'] = 'FIELD:CType:!=:agecalc_agecomp';
+$GLOBALS['TCA']['tt_content']['columns']['recursive']['displayCond'] = 'FIELD:CType:!=:agecalc_agecomp';
